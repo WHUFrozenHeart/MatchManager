@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2280F038-9114-485D-BA21-CB05ECFFE3E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MatchManager</RootNamespace>
+    <AssemblyName>MatchManager</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin4, Version=2006.3.22.45, Culture=neutral, PublicKeyToken=0ed4c5f2bbf81ac0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.15\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.EntityFramework, Version=8.0.15.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.EntityFramework.8.0.15\lib\net452\MySql.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddRefereeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRefereeForm.Designer.cs">
+      <DependentUpon>AddRefereeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeCoachForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeCoachForm.Designer.cs">
+      <DependentUpon>ChangeCoachForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeDoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeDoctorForm.Designer.cs">
+      <DependentUpon>ChangeDoctorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeLeaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeLeaderForm.Designer.cs">
+      <DependentUpon>ChangeLeaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeRefereeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeRefereeForm.Designer.cs">
+      <DependentUpon>ChangeRefereeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckChooseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckChooseForm.Designer.cs">
+      <DependentUpon>CheckChooseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach.cs" />
+    <Compile Include="Doctor.cs" />
+    <Compile Include="File.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="GroupRefereeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupRefereeForm.Designer.cs">
+      <DependentUpon>GroupRefereeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupForm.Designer.cs">
+      <DependentUpon>GroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IndividualGradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IndividualGradeForm.Designer.cs">
+      <DependentUpon>IndividualGradeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputCulturalGradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputCulturalGradeForm.Designer.cs">
+      <DependentUpon>InputCulturalGradeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorControlForm.Designer.cs">
+      <DependentUpon>MajorControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MajorRefereeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorRefereeForm.Designer.cs">
+      <DependentUpon>MajorRefereeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddLeaderAndDocForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddLeaderAndDocForm.Designer.cs">
+      <DependentUpon>AddLeaderAndDocForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPlayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPlayerForm.Designer.cs">
+      <DependentUpon>AddPlayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCoachForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCoachForm.Designer.cs">
+      <DependentUpon>AddCoachForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Leader.cs" />
+    <Compile Include="MajorScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MajorScoreForm.Designer.cs">
+      <DependentUpon>MajorScoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Match.cs" />
+    <Compile Include="MatchGradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MatchGradeForm.Designer.cs">
+      <DependentUpon>MatchGradeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MatchSystemDB.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerDetailForm.Designer.cs">
+      <DependentUpon>PlayerDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerMatch.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Referee.cs" />
+    <Compile Include="RefereeGroup.cs" />
+    <Compile Include="ScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScoreForm.Designer.cs">
+      <DependentUpon>ScoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Team.cs" />
+    <Compile Include="TeamDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamDetailForm.Designer.cs">
+      <DependentUpon>TeamDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeamGradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamGradeForm.Designer.cs">
+      <DependentUpon>TeamGradeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeamServices.cs" />
+    <Compile Include="UploadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UploadForm.Designer.cs">
+      <DependentUpon>UploadForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddRefereeForm.resx">
+      <DependentUpon>AddRefereeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCoachForm.resx">
+      <DependentUpon>ChangeCoachForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeDoctorForm.resx">
+      <DependentUpon>ChangeDoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeLeaderForm.resx">
+      <DependentUpon>ChangeLeaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeRefereeForm.resx">
+      <DependentUpon>ChangeRefereeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckChooseForm.resx">
+      <DependentUpon>CheckChooseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupRefereeForm.resx">
+      <DependentUpon>GroupRefereeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupForm.resx">
+      <DependentUpon>GroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IndividualGradeForm.resx">
+      <DependentUpon>IndividualGradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputCulturalGradeForm.resx">
+      <DependentUpon>InputCulturalGradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorControlForm.resx">
+      <DependentUpon>MajorControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorRefereeForm.resx">
+      <DependentUpon>MajorRefereeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddLeaderAndDocForm.resx">
+      <DependentUpon>AddLeaderAndDocForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPlayerForm.resx">
+      <DependentUpon>AddPlayerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCoachForm.resx">
+      <DependentUpon>AddCoachForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MajorScoreForm.resx">
+      <DependentUpon>MajorScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MatchGradeForm.resx">
+      <DependentUpon>MatchGradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerDetailForm.resx">
+      <DependentUpon>PlayerDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ScoreForm.resx">
+      <DependentUpon>ScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamDetailForm.resx">
+      <DependentUpon>TeamDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamGradeForm.resx">
+      <DependentUpon>TeamGradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadForm.resx">
+      <DependentUpon>UploadForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Coach.datasource" />
+    <None Include="Properties\DataSources\Doctor.datasource" />
+    <None Include="Properties\DataSources\Group.datasource" />
+    <None Include="Properties\DataSources\Leader.datasource" />
+    <None Include="Properties\DataSources\Match.datasource" />
+    <None Include="Properties\DataSources\Player.datasource" />
+    <None Include="Properties\DataSources\PlayerMatch.datasource" />
+    <None Include="Properties\DataSources\Referee.datasource" />
+    <None Include="Properties\DataSources\RefereeGroup.datasource" />
+    <None Include="Properties\DataSources\Team.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\无标题.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\无标题2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
